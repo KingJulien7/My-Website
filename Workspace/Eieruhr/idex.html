@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="manifest.json">
+    <title>Document</title>
+
+
+    <style>
+        .backround-dark {
+            background-color: #262626;
+        }
+        
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .margin-top {
+            margin-top: 150px;
+        }
+
+        .timer {
+            font-size: 70px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+
+    <script>
+        let alarm = new Audio('alarm.mp3');
+        let timerStartet = false;
+
+
+        function startTimer() {
+            if(!timerStartet) {
+            let startTime = new Date().getTime();
+            let fiveMinutes = 1000 * 60 * 5;
+            let endTime = startTime + fiveMinutes;
+
+
+            setInterval(function() {
+                let timeLeft = endTime - new Date().getTime();
+
+
+                if(timeLeft > 0) {
+                let minutes = timeLeft / (1000 * 60);
+                minutes = Math.floor(minutes);
+                let seconds = (timeLeft / 1000) % 60;
+                seconds = Math.round(seconds);
+                seconds = ('0' + seconds).slice(-2)
+                let text = '0' + minutes + ' : ' + seconds;
+                timer.innerHTML = text;
+                } else {
+                    alarm.play();
+                    timer.innerHTML = '00 : 00';
+                }
+            }, 1000);
+            timerStartet = true;
+        }
+    }
+        /*function startTimer() {
+            let minutes = 5;
+            let seconds = 60;
+            setInterval(function(){
+                seconds = seconds - 1;
+                if (seconds == 0) {
+                    minutes = minutes - 1;
+                    seconds = 60;
+                }
+                if (minutes == 0 && seconds == 0) {
+                    break
+                }
+                document.getElementById('timer').innerHTML = '0' + minutes + ' : ' + seconds;
+            }, 1000);
+        }*/
+    </script>
+</head>
+
+<body class="backround-dark">
+
+    <div>
+        <img src="img/menu.png">
+    </div>
+
+
+    <div class="center margin-top">
+        <img src="img/egg.png">
+    </div>
+
+
+    <div class="
+                 center margin-top timer" id="timer">05 : 00</div>
+    <div class="center margin-top">
+        <img onclick="startTimer()" src="img/button.png">
+    </div>
+</body>
+
+</html>

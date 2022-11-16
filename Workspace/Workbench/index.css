@@ -1,0 +1,23 @@
+:root {
+    --border-radius: 15px;
+}
+
+body {
+    background-color: turquoise;
+    font-family: 'Fira Sans', sans-serif;
+}
+.headlines {
+    text-align: center;
+    background-color: white;
+    padding: 16px;
+    border-radius: var(--border-radius);
+}
+.inhalt {
+    background-color: white;
+    margin-top: 16px;
+    border-radius: var(--border-radius);
+}
+.text {
+    text-align: center;
+
+}

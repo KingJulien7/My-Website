@@ -1,0 +1,60 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+table {
+    width: 100%;
+    height: 70vh;
+    color: white;
+    background-color: rgb(40, 40, 40);
+
+}
+
+td {
+    width: 25%;
+    text-align: center;
+    background-color: rgb(20, 20, 20);
+    font-size: 32px;
+}
+
+td:hover {
+    background-color: rgb(30, 30, 30);
+    cursor: pointer;
+}
+
+#resultArea {
+    height: 30vh;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    font-size: 48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+#resultButton {
+    background-color: rgb(79, 108, 227);
+}
+
+#resultButton:hover {
+    background-color: rgb(96, 121, 223);
+}
+
+.otherButtons {
+    background-color: orange;
+}
+
+.otherButtons:hover {
+    background-color: rgb(235, 179, 76);
+}
+
+#comma {
+    background-color: rgb(79, 108, 227);
+}
+
+#comma:hover {
+    background-color: rgb(96, 121, 223);
+}
