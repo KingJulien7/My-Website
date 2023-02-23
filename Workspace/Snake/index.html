@@ -14,7 +14,7 @@
         }
     </style>
 </head>
-w
+
 
 <body>
 
@@ -41,7 +41,7 @@ w
 
         placeFood();
 
-        setInterval(gameLoop, 300);
+        setInterval(gameLoop, 250);
 
         document.addEventListener('keydown', keyDown);
 
@@ -144,6 +144,23 @@ w
         }
 
         function keyDown(e) {
+
+            if (e.keyCode == 65) {
+                direction = 'LEFT';
+            }
+
+            if (e.keyCode == 87) {
+                direction = 'UP';
+            }
+
+            if (e.keyCode == 68) {
+                direction = 'RIGHT';
+            }
+
+            if (e.keyCode == 83) {
+                direction = 'DOWN';
+            }
+            
             if (e.keyCode == 37) {
                 direction = 'LEFT';
             }
