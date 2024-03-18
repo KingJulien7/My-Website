@@ -39,9 +39,12 @@ while True:
         print()
         input()
 
-    repeat = input('Type "repeat" to play again or "stop" to end the game: ')
+    repeat = input('Type "repeat" to play again or press Enter to end the game: ')
 
-    if repeat.lower() == 'stop':
+    if repeat.lower() == '':
+        break
+
+    if repeat.lower() != ''
         break
 
     if repeat.lower() == 'repeat':
