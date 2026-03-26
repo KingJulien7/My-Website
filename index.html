@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlons-Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-height: 100px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        main {
+            background-color: #ecf0f1;
+            padding: 40px;
+            flex: 1; /* Füllt den mittleren Bereich aus */
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #95a5a6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Styling für die Tabelle */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 2px solid #2c3e50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #bdc3c7;
+        }
+
+        /* Styling für das Formular */
+        form input {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+
+        .pause {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Marlons-Homepage</h1>
+        <img src="https://i.redd.it/atqyqno6tv1g1.gif" alt="Header Bild">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="https://www.berlin.de" target="_blank">Berlin</a></li>
+            <li><a href="https://www.hamburg.de" target="_blank">Hamburg</a></li>
+            <li><a href="https://www.muenchen.de" target="_blank">München</a></li>
+            <li><a href="https://www.stadt-koeln.de" target="_blank">Köln</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Mein Stundenplan (Auszug)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stunde</th>
+                        <th>Montag</th>
+                        <th>Dienstag</th>
+                        <th>Mittwoch</th>
+                        <th>Donnerstag</th>
+                        <th>Freitag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td rowspan="2">Religion</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2">Informatik</td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="pause">Pause</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td rowspan="2">Physik</td>
+                        <td rowspan="2">Physik</td>
+                        <td rowspan="2">Mathe</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2">Latein</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="pause">Pause</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Deutsch</td>
+                        <td>Englisch</td>
+                        <td>Informatik</td>
+                        <td>Mathe</td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td></td>
+                        <td></td>
+                        <td rowspan="2">Latein</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Anmeldung am EvGBM</h2>
+            <form action="mailto:sekretariat@evgbm.de" method="post" enctype="text/plain">
+                <input type="text" name="Vorname" placeholder="Vorname" required>
+                <input type="text" name="Nachname" placeholder="Nachname" required>
+                <input type="text" name="Strasse" placeholder="Straße">
+                <input type="text" name="PLZ" placeholder="PLZ">
+                <input type="text" name="Ort" placeholder="Ort">
+                <input type="email" name="Email" placeholder="E-Mail Adresse" required>
+                <button type="submit">Jetzt anmelden</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Kontakt</h3>
+        <p>Finn Mustermann | Musterstraße 1 | 56470 Bad Marienberg</p>
+        <p>E-Mail: info@finns-homepage.de</p>
+    </footer>
+
+</body>
+</html>
